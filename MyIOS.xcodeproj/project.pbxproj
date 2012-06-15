@@ -20,6 +20,7 @@
 		F61CD8B9158B08C500D1C597 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = F61CD8AC158B08C500D1C597 /* SBJsonUTF8Stream.m */; };
 		F61CD8BA158B08C500D1C597 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F61CD8AE158B08C500D1C597 /* SBJsonWriter.m */; };
 		F61CD8C2158B0B7D00D1C597 /* JSONViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F61CD8C1158B0B7D00D1C597 /* JSONViewController.m */; };
+		F61CD8C6158B0D5B00D1C597 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F61CD8C5158B0D5B00D1C597 /* MBProgressHUD.m */; };
 		F6458941158A3D4D00BC79B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6458940158A3D4D00BC79B8 /* UIKit.framework */; };
 		F6458943158A3D4D00BC79B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6458942158A3D4D00BC79B8 /* Foundation.framework */; };
 		F6458945158A3D4D00BC79B8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6458944158A3D4D00BC79B8 /* CoreGraphics.framework */; };
@@ -59,6 +60,8 @@
 		F61CD8AE158B08C500D1C597 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		F61CD8C0158B0B7D00D1C597 /* JSONViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONViewController.h; sourceTree = "<group>"; };
 		F61CD8C1158B0B7D00D1C597 /* JSONViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONViewController.m; sourceTree = "<group>"; };
+		F61CD8C4158B0D5B00D1C597 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		F61CD8C5158B0D5B00D1C597 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		F645893C158A3D4D00BC79B8 /* MyIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6458940158A3D4D00BC79B8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F6458942158A3D4D00BC79B8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -159,10 +162,28 @@
 			name = json;
 			sourceTree = "<group>";
 		};
+		F61CD8C3158B0D5B00D1C597 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				F61CD8C4158B0D5B00D1C597 /* MBProgressHUD.h */,
+				F61CD8C5158B0D5B00D1C597 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		F61CD8C7158B0D6100D1C597 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				F61CD8C3158B0D5B00D1C597 /* MBProgressHUD */,
+				F61CD895158B08C500D1C597 /* JSON */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
 		F6458931158A3D4D00BC79B8 = {
 			isa = PBXGroup;
 			children = (
-				F61CD895158B08C500D1C597 /* JSON */,
+				F61CD8C7158B0D6100D1C597 /* lib */,
 				F6458946158A3D4D00BC79B8 /* MyIOS */,
 				F645893F158A3D4D00BC79B8 /* Frameworks */,
 				F645893D158A3D4D00BC79B8 /* Products */,
@@ -288,6 +309,7 @@
 				F61CD8B9158B08C500D1C597 /* SBJsonUTF8Stream.m in Sources */,
 				F61CD8BA158B08C500D1C597 /* SBJsonWriter.m in Sources */,
 				F61CD8C2158B0B7D00D1C597 /* JSONViewController.m in Sources */,
+				F61CD8C6158B0D5B00D1C597 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
