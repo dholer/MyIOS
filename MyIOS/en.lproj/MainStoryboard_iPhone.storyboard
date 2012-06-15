@@ -228,7 +228,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gw0-0D-mFy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController definesPresentationContext="YES" id="cip-Td-zPC" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Rgo-Jf-GD8">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -243,33 +243,6 @@
             <point key="canvasLocation" x="124" y="-491"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="JSONViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/JSONViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backToHome:"/>
-                <relationship kind="action" name="callApi:"/>
-                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="MBProgressHUDViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MBProgressHUDViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="HUBToHome:"/>
-                <relationship kind="action" name="showSimple:"/>
-                <relationship kind="action" name="showWithLabel:"/>
-                <relationship kind="action" name="showWithLabelDeterminate:"/>
-            </relationships>
-        </class>
-        <class className="dholerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/dholerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="goASIHTTPRequest:"/>
-                <relationship kind="action" name="goHUB:"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

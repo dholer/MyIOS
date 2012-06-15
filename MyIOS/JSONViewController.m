@@ -67,6 +67,7 @@
 - (void) requestFinished:(ASIHTTPRequest *)request
 {        
     NSString *response = [request responseString];
+    self.textView.text = response;
     NSLog(@"%@",response);
     
     NSDictionary *responseDict = [response JSONValue];
