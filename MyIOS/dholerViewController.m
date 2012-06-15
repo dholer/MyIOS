@@ -46,4 +46,8 @@
 - (IBAction)goHUB:(id)sender {
     [self performSegueWithIdentifier:@"goHUB" sender:self];
 }
+
+- (IBAction)goLibs:(id)sender {
+    [self performSegueWithIdentifier:@"goLibs" sender:self];
+}
 @end

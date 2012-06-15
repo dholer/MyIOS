@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F60BCEB6158B8A170012E0FA /* Sqlite3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F60BCEB5158B8A170012E0FA /* Sqlite3ViewController.m */; };
+		F60BCEB8158B8CC30012E0FA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F60BCEB7158B8CC30012E0FA /* libsqlite3.dylib */; };
 		F61CD8AF158B08C500D1C597 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = F61CD897158B08C500D1C597 /* NSObject+SBJson.m */; };
 		F61CD8B0158B08C500D1C597 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F61CD89A158B08C500D1C597 /* SBJsonParser.m */; };
 		F61CD8B1158B08C500D1C597 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F61CD89C158B08C500D1C597 /* SBJsonStreamParser.m */; };
@@ -47,6 +49,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F60BCEB4158B8A170012E0FA /* Sqlite3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sqlite3ViewController.h; sourceTree = "<group>"; };
+		F60BCEB5158B8A170012E0FA /* Sqlite3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sqlite3ViewController.m; sourceTree = "<group>"; };
+		F60BCEB7158B8CC30012E0FA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		F61CD896158B08C500D1C597 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		F61CD897158B08C500D1C597 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		F61CD898158B08C500D1C597 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -125,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F60BCEB8158B8CC30012E0FA /* libsqlite3.dylib in Frameworks */,
 				F6872040158B2234008220B5 /* libz.1.2.5.dylib in Frameworks */,
 				F687203E158B222E008220B5 /* MobileCoreServices.framework in Frameworks */,
 				F687203C158B2228008220B5 /* CFNetwork.framework in Frameworks */,
@@ -138,6 +144,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F60BCEB3158B88420012E0FA /* Sqlite3 */ = {
+			isa = PBXGroup;
+			children = (
+				F60BCEB4158B8A170012E0FA /* Sqlite3ViewController.h */,
+				F60BCEB5158B8A170012E0FA /* Sqlite3ViewController.m */,
+			);
+			name = Sqlite3;
+			sourceTree = "<group>";
+		};
 		F61CD895158B08C500D1C597 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +197,7 @@
 		F61CD8BD158B0AD800D1C597 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				F60BCEB3158B88420012E0FA /* Sqlite3 */,
 				F6CDE3CF158B386D00D9B60A /* MBProgressHUD */,
 				F61CD8BF158B0B3700D1C597 /* WebService */,
 				F61CD8BE158B0B0100D1C597 /* controllers */,
@@ -249,6 +265,7 @@
 		F645893F158A3D4D00BC79B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F60BCEB7158B8CC30012E0FA /* libsqlite3.dylib */,
 				F6458940158A3D4D00BC79B8 /* UIKit.framework */,
 				F6458942158A3D4D00BC79B8 /* Foundation.framework */,
 				F6458944158A3D4D00BC79B8 /* CoreGraphics.framework */,
@@ -418,6 +435,7 @@
 				F6872036158B21F2008220B5 /* ASINetworkQueue.m in Sources */,
 				F6872037158B21F2008220B5 /* Reachability.m in Sources */,
 				F6CDE3D5158B3B5600D9B60A /* MBProgressHUDViewController.m in Sources */,
+				F60BCEB6158B8A170012E0FA /* Sqlite3ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
