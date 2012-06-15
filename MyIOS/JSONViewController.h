@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JSONViewController : UIViewController
+@interface JSONViewController : UIViewController<UITextFieldDelegate>
 - (IBAction)backToHome:(id)sender;
 - (IBAction)callApi:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *textField;

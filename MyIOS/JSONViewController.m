@@ -66,13 +66,28 @@
 
 - (void) requestFinished:(ASIHTTPRequest *)request
 {        
-    NSString *response = [request responseString];
-    self.textView.text = response;
-    NSLog(@"%@",response);
     
-    NSDictionary *responseDict = [response JSONValue];
-    NSString *code = [responseDict objectForKey:@"code"];
-    NSLog(@"respose data is: %@",code);
+    if(request.responseStatusCode == 200){    
+    
+        NSString *response = [request responseString];
+        self.textView.text = response;
+        NSLog(@"%@",response);
+        
+        NSDictionary *responseDict = [response JSONValue];
+        NSString *code = [responseDict objectForKey:@"code"];
+        NSLog(@"respose data is: %@",code);
+        
+    }else if (request.responseStatusCode == 404) {        
+        
+        self.textView.text = @"not found!";
+        
+    }else {
+        
+        self.textView.text = @"unexpected error!";
+        
+    }
+    
+    
     [MBProgressHUD hideHUDForView:self.view animated:YES];
     
 }
