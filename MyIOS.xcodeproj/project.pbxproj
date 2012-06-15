@@ -43,6 +43,7 @@
 		F687203C158B2228008220B5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F687203B158B2228008220B5 /* CFNetwork.framework */; };
 		F687203E158B222E008220B5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F687203D158B222E008220B5 /* MobileCoreServices.framework */; };
 		F6872040158B2234008220B5 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F687203F158B2234008220B5 /* libz.1.2.5.dylib */; };
+		F6CDE3D5158B3B5600D9B60A /* MBProgressHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6CDE3D4158B3B5600D9B60A /* MBProgressHUDViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +116,8 @@
 		F687203B158B2228008220B5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		F687203D158B222E008220B5 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		F687203F158B2234008220B5 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		F6CDE3D3158B3B5600D9B60A /* MBProgressHUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUDViewController.h; sourceTree = "<group>"; };
+		F6CDE3D4158B3B5600D9B60A /* MBProgressHUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUDViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,7 +182,8 @@
 		F61CD8BD158B0AD800D1C597 /* classes */ = {
 			isa = PBXGroup;
 			children = (
-				F61CD8BF158B0B3700D1C597 /* json */,
+				F6CDE3CF158B386D00D9B60A /* MBProgressHUD */,
+				F61CD8BF158B0B3700D1C597 /* WebService */,
 				F61CD8BE158B0B0100D1C597 /* controllers */,
 				F645894F158A3D4D00BC79B8 /* dholerAppDelegate.h */,
 				F6458950158A3D4D00BC79B8 /* dholerAppDelegate.m */,
@@ -196,13 +200,13 @@
 			name = controllers;
 			sourceTree = "<group>";
 		};
-		F61CD8BF158B0B3700D1C597 /* json */ = {
+		F61CD8BF158B0B3700D1C597 /* WebService */ = {
 			isa = PBXGroup;
 			children = (
 				F61CD8C0158B0B7D00D1C597 /* JSONViewController.h */,
 				F61CD8C1158B0B7D00D1C597 /* JSONViewController.m */,
 			);
-			name = json;
+			name = WebService;
 			sourceTree = "<group>";
 		};
 		F61CD8C3158B0D5B00D1C597 /* MBProgressHUD */ = {
@@ -314,6 +318,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F6CDE3CF158B386D00D9B60A /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				F6CDE3D3158B3B5600D9B60A /* MBProgressHUDViewController.h */,
+				F6CDE3D4158B3B5600D9B60A /* MBProgressHUDViewController.m */,
+			);
+			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -404,6 +417,7 @@
 				F6872035158B21F2008220B5 /* ASIInputStream.m in Sources */,
 				F6872036158B21F2008220B5 /* ASINetworkQueue.m in Sources */,
 				F6872037158B21F2008220B5 /* Reachability.m in Sources */,
+				F6CDE3D5158B3B5600D9B60A /* MBProgressHUDViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

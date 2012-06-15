@@ -10,5 +10,8 @@
 
 @interface JSONViewController : UIViewController
 - (IBAction)backToHome:(id)sender;
+- (IBAction)callApi:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end

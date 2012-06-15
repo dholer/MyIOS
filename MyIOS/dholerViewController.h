@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface dholerViewController : UIViewController
-- (IBAction)goToJSON:(id)sender;
+- (IBAction)goASIHTTPRequest:(id)sender;
+- (IBAction)goHUB:(id)sender;
 
 @end

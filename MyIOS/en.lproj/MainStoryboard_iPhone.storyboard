@@ -16,17 +16,17 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="aS5-CN-vcd">
-                                <rect key="frame" x="106" y="20" width="43" height="21"/>
+                                <rect key="frame" x="139" y="20" width="43" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CWQ-Yk-Rta">
-                                <rect key="frame" x="91" y="61" width="72" height="37"/>
+                                <rect key="frame" x="48" y="49" width="224" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="JSON">
+                                <state key="normal" title="ASIHTTPRequest">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -34,40 +34,62 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="goToJSON:" destination="2" eventType="touchUpInside" id="cdk-Ml-xYt"/>
+                                    <action selector="goASIHTTPRequest:" destination="2" eventType="touchUpInside" id="Hmy-no-gGX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iyY-LC-0OR">
+                                <rect key="frame" x="48" y="100" width="224" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="MBProgressHUD">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goHUB:" destination="2" eventType="touchUpInside" id="LVF-Ot-NLl"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="PfI-6L-2dr" kind="modal" identifier="goToJSON" modalTransitionStyle="flipHorizontal" id="hIT-Hq-y8q"/>
+                        <segue destination="cip-Td-zPC" kind="modal" identifier="goASIHTTPRequest" modalTransitionStyle="flipHorizontal" id="kMh-Rk-K12"/>
+                        <segue destination="ebw-py-l26" kind="modal" identifier="goHUB" modalTransitionStyle="flipHorizontal" id="T0b-2p-Ift"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="190" y="157"/>
+            <point key="canvasLocation" x="-279" y="-15"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="V1d-OU-XRj">
+        <!--ProgressHUD View Controller - Title-->
+        <scene sceneID="fmR-Bf-scs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Unz-1Y-5a9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="PfI-6L-2dr" customClass="JSONViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9WU-TQ-glX">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5au-8y-bxt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="ebw-py-l26" customClass="MBProgressHUDViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rqd-yP-oAy">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="json" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Wqv-UE-XLr">
-                                <rect key="frame" x="92" y="11" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ABq-Rn-82F">
-                                <rect key="frame" x="190" y="4" width="72" height="37"/>
+                            <navigationBar contentMode="scaleToFill" id="MHQ-mR-JSX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="MBProgressHUD" id="TS8-iL-PbC">
+                                        <barButtonItem key="leftBarButtonItem" title="Home" id="NKb-op-5ek">
+                                            <connections>
+                                                <action selector="HUBToHome:" destination="ebw-py-l26" id="ERg-Lg-iPo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JrP-A5-auR">
+                                <rect key="frame" x="20" y="61" width="102" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Home">
+                                <state key="normal" title="showSimple">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -75,24 +97,185 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="backToHome:" destination="PfI-6L-2dr" eventType="touchUpInside" id="iNN-20-RvV"/>
+                                    <action selector="showSimple:" destination="ebw-py-l26" eventType="touchUpInside" id="vwg-WW-WYS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5YX-yt-0sF">
+                                <rect key="frame" x="149" y="60" width="134" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="showWithLabel">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showWithLabel:" destination="ebw-py-l26" eventType="touchUpInside" id="Y4X-cB-wRP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XgB-qg-IFR">
+                                <rect key="frame" x="20" y="117" width="222" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="showWithLabelDeterminate">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showWithLabelDeterminate:" destination="ebw-py-l26" eventType="touchUpInside" id="d16-0z-H84"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="AcL-Bj-01U"/>
+                    <navigationItem key="navigationItem" title="Title" id="1Zj-XV-60g"/>
                     <connections>
-                        <segue destination="2" kind="modal" identifier="JSONToHome" modalTransitionStyle="flipHorizontal" id="kZD-NB-es0"/>
+                        <segue destination="2" kind="modal" identifier="HUBToHome" id="uZS-fz-cZJ"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="576" y="-18"/>
+            <point key="canvasLocation" x="150" y="376"/>
+        </scene>
+        <!--View Controller - OTHER-->
+        <scene sceneID="7lG-tO-qpt">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1BD-q8-Ka2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="EjV-VJ-kkE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="di6-rg-uWY">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="OTHER" id="7eq-NE-vf3"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="600" y="-838"/>
+        </scene>
+        <!--View Controller - Title-->
+        <scene sceneID="PMt-HU-Xg3">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jna-nj-MfM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="ANp-Kl-o5m" customClass="JSONViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NsM-pt-wTQ">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" id="p87-un-eJj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="JSON Demo" id="goD-JU-24M">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="AvG-Gp-5tb">
+                                            <connections>
+                                                <action selector="backToHome:" destination="ANp-Kl-o5m" id="LiR-nX-7p8"/>
+                                                <segue destination="2" kind="modal" identifier="goHome" modalTransitionStyle="flipHorizontal" id="eTD-Jn-AmU"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="TbT-Zv-yta">
+                                <rect key="frame" x="33" y="60" width="172" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ANp-Kl-o5m" id="jVN-bF-TfZ"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ikE-Uj-jcl">
+                                <rect key="frame" x="228" y="57" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Call">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="callApi:" destination="ANp-Kl-o5m" eventType="touchUpInside" id="98M-o3-7M5"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="zNH-S0-CJ0">
+                                <rect key="frame" x="20" y="112" width="272" height="279"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="JSON" id="1hf-tf-I9f"/>
+                    <navigationItem key="navigationItem" title="Title" id="IjA-mh-McD"/>
+                    <connections>
+                        <outlet property="textField" destination="TbT-Zv-yta" id="mHu-Vf-g7I"/>
+                        <outlet property="textView" destination="zNH-S0-CJ0" id="rSY-b5-cmm"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="600" y="-239"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="IVW-Y8-Hn4">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gw0-0D-mFy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarController definesPresentationContext="YES" id="cip-Td-zPC" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Rgo-Jf-GD8">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ANp-Kl-o5m" kind="relationship" relationship="viewControllers" id="qEA-R5-ugi"/>
+                        <segue destination="EjV-VJ-kkE" kind="relationship" relationship="viewControllers" id="D5z-Li-AaZ"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="124" y="-491"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="JSONViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JSONViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backToHome:"/>
+                <relationship kind="action" name="callApi:"/>
+                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="MBProgressHUDViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MBProgressHUDViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="HUBToHome:"/>
+                <relationship kind="action" name="showSimple:"/>
+                <relationship kind="action" name="showWithLabel:"/>
+                <relationship kind="action" name="showWithLabelDeterminate:"/>
+            </relationships>
+        </class>
+        <class className="dholerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/dholerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="goASIHTTPRequest:"/>
+                <relationship kind="action" name="goHUB:"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="uZS-fz-cZJ"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -7,12 +7,18 @@
 //
 
 #import "JSONViewController.h"
+#import "SBJson.h"
+#import "ASIHTTPRequest.h"
+#import "ASIFormDataRequest.h"
+#import "MBProgressHUD.h"
 
 @interface JSONViewController ()
 
 @end
 
 @implementation JSONViewController
+@synthesize textField = _textField;
+@synthesize textView = _textView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,6 +37,8 @@
 
 - (void)viewDidUnload
 {
+    [self setTextView:nil];
+    [self setTextField:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -41,7 +49,43 @@
 }
 
 - (IBAction)backToHome:(id)sender {
-    NSLog(@"test");
     [self performSegueWithIdentifier:@"JSONToHome" sender:self];
+}
+
+- (IBAction)callApi:(id)sender {
+    NSString *code = self.textField.text;    
+    NSLog(@"textField value is :%@",code);  
+    NSURL *url = [NSURL URLWithString:@"http://127.0.0.1/projects/api/promos.php"];
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setPostValue:code forKey:@"code"];
+    [request setDelegate:self];
+    [request startAsynchronous];
+    MBProgressHUD *hud =[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"loading api";    
+}
+
+- (void) requestFinished:(ASIHTTPRequest *)request
+{        
+    NSString *response = [request responseString];
+    NSLog(@"%@",response);
+    
+    NSDictionary *responseDict = [response JSONValue];
+    NSString *code = [responseDict objectForKey:@"code"];
+    NSLog(@"respose data is: %@",code);
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    
+}
+- (void) requestFailed:(ASIHTTPRequest *)request
+{
+    NSError *error = [request error];
+    NSLog(@"%@",error);
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+}
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    NSLog(@"return:%@",textField.text);
+    return YES;
 }
 @end

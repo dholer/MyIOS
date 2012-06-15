@@ -38,4 +38,12 @@
 - (IBAction)goToJSON:(id)sender {
     [self performSegueWithIdentifier:@"goToJSON" sender:self];
 }
+
+- (IBAction)goASIHTTPRequest:(id)sender {
+    [self performSegueWithIdentifier:@"goASIHTTPRequest" sender:self];
+}
+
+- (IBAction)goHUB:(id)sender {
+    [self performSegueWithIdentifier:@"goHUB" sender:self];
+}
 @end
