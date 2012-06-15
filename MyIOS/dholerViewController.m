@@ -35,4 +35,7 @@
     }
 }
 
+- (IBAction)goToJSON:(id)sender {
+    [self performSegueWithIdentifier:@"goToJSON" sender:self];
+}
 @end

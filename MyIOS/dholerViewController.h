@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface dholerViewController : UIViewController
+- (IBAction)goToJSON:(id)sender;
 
 @end
