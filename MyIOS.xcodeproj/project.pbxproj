@@ -37,6 +37,7 @@
 		F6623CD6158C2E2E00AD403A /* AddButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6623CD5158C2E2E00AD403A /* AddButtonViewController.m */; };
 		F6623CDA158C3C6500AD403A /* ReadPlistFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6623CD9158C3C6500AD403A /* ReadPlistFileViewController.m */; };
 		F6623CDC158C3C9900AD403A /* customInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6623CDB158C3C9900AD403A /* customInfo.plist */; };
+		F6623CE0158C46CB00AD403A /* UIComponentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6623CDF158C46CB00AD403A /* UIComponentViewController.m */; };
 		F687202F158B21F2008220B5 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = F687201A158B21F2008220B5 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F6872030158B21F2008220B5 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = F687201D158B21F2008220B5 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F6872031158B21F2008220B5 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = F687201F158B21F2008220B5 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -109,6 +110,8 @@
 		F6623CD8158C3C6500AD403A /* ReadPlistFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadPlistFileViewController.h; sourceTree = "<group>"; };
 		F6623CD9158C3C6500AD403A /* ReadPlistFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadPlistFileViewController.m; sourceTree = "<group>"; };
 		F6623CDB158C3C9900AD403A /* customInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = customInfo.plist; sourceTree = "<group>"; };
+		F6623CDE158C46CB00AD403A /* UIComponentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIComponentViewController.h; sourceTree = "<group>"; };
+		F6623CDF158C46CB00AD403A /* UIComponentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIComponentViewController.m; sourceTree = "<group>"; };
 		F6872019158B21F2008220B5 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		F687201A158B21F2008220B5 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		F687201B158B21F2008220B5 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -211,6 +214,7 @@
 		F61CD8BD158B0AD800D1C597 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				F6623CDD158C469D00AD403A /* UIComponent */,
 				F6623CD7158C3C3600AD403A /* PlistFile */,
 				F6623CD3158C2E1300AD403A /* addButton */,
 				F6623CCB158C175E00AD403A /* Keyboard */,
@@ -339,6 +343,15 @@
 				F6623CDB158C3C9900AD403A /* customInfo.plist */,
 			);
 			name = PlistFile;
+			sourceTree = "<group>";
+		};
+		F6623CDD158C469D00AD403A /* UIComponent */ = {
+			isa = PBXGroup;
+			children = (
+				F6623CDE158C46CB00AD403A /* UIComponentViewController.h */,
+				F6623CDF158C46CB00AD403A /* UIComponentViewController.m */,
+			);
+			name = UIComponent;
 			sourceTree = "<group>";
 		};
 		F6872018158B21F2008220B5 /* ASIHTTPRequest */ = {
@@ -488,6 +501,7 @@
 				F6623CD2158C243700AD403A /* KeyboardDelegateViewController.m in Sources */,
 				F6623CD6158C2E2E00AD403A /* AddButtonViewController.m in Sources */,
 				F6623CDA158C3C6500AD403A /* ReadPlistFileViewController.m in Sources */,
+				F6623CE0158C46CB00AD403A /* UIComponentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
