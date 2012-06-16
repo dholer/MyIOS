@@ -51,6 +51,7 @@
 		F687203C158B2228008220B5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F687203B158B2228008220B5 /* CFNetwork.framework */; };
 		F687203E158B222E008220B5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F687203D158B222E008220B5 /* MobileCoreServices.framework */; };
 		F6872040158B2234008220B5 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F687203F158B2234008220B5 /* libz.1.2.5.dylib */; };
+		F6C993E4158CCBC10052DE5F /* PikerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C993E3158CCBC10052DE5F /* PikerDemoViewController.m */; };
 		F6CDE3D5158B3B5600D9B60A /* MBProgressHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6CDE3D4158B3B5600D9B60A /* MBProgressHUDViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -138,6 +139,8 @@
 		F687203B158B2228008220B5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		F687203D158B222E008220B5 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		F687203F158B2234008220B5 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		F6C993E2158CCBC10052DE5F /* PikerDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PikerDemoViewController.h; sourceTree = "<group>"; };
+		F6C993E3158CCBC10052DE5F /* PikerDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PikerDemoViewController.m; sourceTree = "<group>"; };
 		F6CDE3D3158B3B5600D9B60A /* MBProgressHUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUDViewController.h; sourceTree = "<group>"; };
 		F6CDE3D4158B3B5600D9B60A /* MBProgressHUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUDViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -350,6 +353,8 @@
 			children = (
 				F6623CDE158C46CB00AD403A /* UIComponentViewController.h */,
 				F6623CDF158C46CB00AD403A /* UIComponentViewController.m */,
+				F6C993E2158CCBC10052DE5F /* PikerDemoViewController.h */,
+				F6C993E3158CCBC10052DE5F /* PikerDemoViewController.m */,
 			);
 			name = UIComponent;
 			sourceTree = "<group>";
@@ -502,6 +507,7 @@
 				F6623CD6158C2E2E00AD403A /* AddButtonViewController.m in Sources */,
 				F6623CDA158C3C6500AD403A /* ReadPlistFileViewController.m in Sources */,
 				F6623CE0158C46CB00AD403A /* UIComponentViewController.m in Sources */,
+				F6C993E4158CCBC10052DE5F /* PikerDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
