@@ -122,9 +122,6 @@
     UIImage *highLighedImage = [UIImage imageNamed:@"yellow.png"]; 
     cell.imageView.highlightedImage = highLighedImage;
     
-   
-    
-    
 	return cell; 
 }
 
