@@ -32,6 +32,11 @@
 		F6458954158A3D4D00BC79B8 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6458952158A3D4D00BC79B8 /* MainStoryboard_iPhone.storyboard */; };
 		F6458957158A3D4D00BC79B8 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6458955158A3D4D00BC79B8 /* MainStoryboard_iPad.storyboard */; };
 		F645895A158A3D4D00BC79B8 /* dholerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6458959158A3D4D00BC79B8 /* dholerViewController.m */; };
+		F6623CCF158C179D00AD403A /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6623CCE158C179D00AD403A /* KeyboardViewController.m */; };
+		F6623CD2158C243700AD403A /* KeyboardDelegateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6623CD1158C243700AD403A /* KeyboardDelegateViewController.m */; };
+		F6623CD6158C2E2E00AD403A /* AddButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6623CD5158C2E2E00AD403A /* AddButtonViewController.m */; };
+		F6623CDA158C3C6500AD403A /* ReadPlistFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6623CD9158C3C6500AD403A /* ReadPlistFileViewController.m */; };
+		F6623CDC158C3C9900AD403A /* customInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6623CDB158C3C9900AD403A /* customInfo.plist */; };
 		F687202F158B21F2008220B5 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = F687201A158B21F2008220B5 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F6872030158B21F2008220B5 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = F687201D158B21F2008220B5 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F6872031158B21F2008220B5 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = F687201F158B21F2008220B5 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -95,6 +100,15 @@
 		F6458956158A3D4D00BC79B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		F6458958158A3D4D00BC79B8 /* dholerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dholerViewController.h; sourceTree = "<group>"; };
 		F6458959158A3D4D00BC79B8 /* dholerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dholerViewController.m; sourceTree = "<group>"; };
+		F6623CCD158C179D00AD403A /* KeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardViewController.h; sourceTree = "<group>"; };
+		F6623CCE158C179D00AD403A /* KeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardViewController.m; sourceTree = "<group>"; };
+		F6623CD0158C243700AD403A /* KeyboardDelegateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardDelegateViewController.h; sourceTree = "<group>"; };
+		F6623CD1158C243700AD403A /* KeyboardDelegateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardDelegateViewController.m; sourceTree = "<group>"; };
+		F6623CD4158C2E2E00AD403A /* AddButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddButtonViewController.h; sourceTree = "<group>"; };
+		F6623CD5158C2E2E00AD403A /* AddButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddButtonViewController.m; sourceTree = "<group>"; };
+		F6623CD8158C3C6500AD403A /* ReadPlistFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadPlistFileViewController.h; sourceTree = "<group>"; };
+		F6623CD9158C3C6500AD403A /* ReadPlistFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadPlistFileViewController.m; sourceTree = "<group>"; };
+		F6623CDB158C3C9900AD403A /* customInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = customInfo.plist; sourceTree = "<group>"; };
 		F6872019158B21F2008220B5 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		F687201A158B21F2008220B5 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		F687201B158B21F2008220B5 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -197,6 +211,9 @@
 		F61CD8BD158B0AD800D1C597 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				F6623CD7158C3C3600AD403A /* PlistFile */,
+				F6623CD3158C2E1300AD403A /* addButton */,
+				F6623CCB158C175E00AD403A /* Keyboard */,
 				F60BCEB3158B88420012E0FA /* Sqlite3 */,
 				F6CDE3CF158B386D00D9B60A /* MBProgressHUD */,
 				F61CD8BF158B0B3700D1C597 /* WebService */,
@@ -292,6 +309,36 @@
 				F645894E158A3D4D00BC79B8 /* MyIOS-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F6623CCB158C175E00AD403A /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F6623CCD158C179D00AD403A /* KeyboardViewController.h */,
+				F6623CCE158C179D00AD403A /* KeyboardViewController.m */,
+				F6623CD0158C243700AD403A /* KeyboardDelegateViewController.h */,
+				F6623CD1158C243700AD403A /* KeyboardDelegateViewController.m */,
+			);
+			name = Keyboard;
+			sourceTree = "<group>";
+		};
+		F6623CD3158C2E1300AD403A /* addButton */ = {
+			isa = PBXGroup;
+			children = (
+				F6623CD4158C2E2E00AD403A /* AddButtonViewController.h */,
+				F6623CD5158C2E2E00AD403A /* AddButtonViewController.m */,
+			);
+			name = addButton;
+			sourceTree = "<group>";
+		};
+		F6623CD7158C3C3600AD403A /* PlistFile */ = {
+			isa = PBXGroup;
+			children = (
+				F6623CD8158C3C6500AD403A /* ReadPlistFileViewController.h */,
+				F6623CD9158C3C6500AD403A /* ReadPlistFileViewController.m */,
+				F6623CDB158C3C9900AD403A /* customInfo.plist */,
+			);
+			name = PlistFile;
 			sourceTree = "<group>";
 		};
 		F6872018158B21F2008220B5 /* ASIHTTPRequest */ = {
@@ -398,6 +445,7 @@
 				F645894B158A3D4D00BC79B8 /* InfoPlist.strings in Resources */,
 				F6458954158A3D4D00BC79B8 /* MainStoryboard_iPhone.storyboard in Resources */,
 				F6458957158A3D4D00BC79B8 /* MainStoryboard_iPad.storyboard in Resources */,
+				F6623CDC158C3C9900AD403A /* customInfo.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +484,10 @@
 				F6872037158B21F2008220B5 /* Reachability.m in Sources */,
 				F6CDE3D5158B3B5600D9B60A /* MBProgressHUDViewController.m in Sources */,
 				F60BCEB6158B8A170012E0FA /* Sqlite3ViewController.m in Sources */,
+				F6623CCF158C179D00AD403A /* KeyboardViewController.m in Sources */,
+				F6623CD2158C243700AD403A /* KeyboardDelegateViewController.m in Sources */,
+				F6623CD6158C2E2E00AD403A /* AddButtonViewController.m in Sources */,
+				F6623CDA158C3C6500AD403A /* ReadPlistFileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
