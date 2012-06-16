@@ -294,21 +294,21 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="rjZ-gT-N17">
-                                <rect key="frame" x="29" y="74" width="79" height="27"/>
+                                <rect key="frame" x="29" y="49" width="79" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="switchChanged:" destination="h0Q-6U-Nuh" eventType="valueChanged" id="AwH-Us-XZB"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="NzF-of-X2O">
-                                <rect key="frame" x="159" y="74" width="79" height="27"/>
+                                <rect key="frame" x="148" y="49" width="79" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="switchChanged:" destination="h0Q-6U-Nuh" eventType="valueChanged" id="2F5-70-z1G"/>
                                 </connections>
                             </switch>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" id="WOr-yT-9MR">
-                                <rect key="frame" x="27" y="26" width="213" height="23"/>
+                                <rect key="frame" x="27" y="7" width="213" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="sliderChanged:" destination="h0Q-6U-Nuh" eventType="valueChanged" id="U5s-HT-1xd"/>
@@ -322,11 +322,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" progress="0.20000000000000004" id="kec-Fh-JHn">
-                                <rect key="frame" x="40" y="149" width="150" height="9"/>
+                                <rect key="frame" x="29" y="32" width="209" height="9"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MA4-ej-Ihb">
-                                <rect key="frame" x="36" y="187" width="158" height="37"/>
+                                <rect key="frame" x="29" y="89" width="158" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="ActionSheet Demo">
@@ -458,12 +458,12 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="h0Q-6U-Nuh" kind="relationship" relationship="viewControllers" id="r4F-xc-jbr"/>
                         <segue destination="y4P-sC-jWK" kind="relationship" relationship="viewControllers" id="kqr-ap-ke9"/>
                         <segue destination="1UQ-uh-SfA" kind="relationship" relationship="viewControllers" id="fuj-9L-KVq"/>
                         <segue destination="aKH-Cj-V3f" kind="relationship" relationship="viewControllers" id="0CK-uv-XDR"/>
                         <segue destination="a8e-hz-AXC" kind="relationship" relationship="viewControllers" id="dpl-t7-Ijr"/>
                         <segue destination="HRM-Zb-KNs" kind="relationship" relationship="viewControllers" id="fY3-kv-GMu"/>
-                        <segue destination="h0Q-6U-Nuh" kind="relationship" relationship="viewControllers" id="r4F-xc-jbr"/>
                     </connections>
                 </tabBarController>
             </objects>
@@ -649,83 +649,6 @@
             <point key="canvasLocation" x="-536" y="-459"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="AddButtonViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddButtonViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addButton:"/>
-            </relationships>
-        </class>
-        <class className="JSONViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/JSONViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backToHome:"/>
-                <relationship kind="action" name="callApi:"/>
-                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="KeyboardDelegateViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/KeyboardDelegateViewController.h"/>
-        </class>
-        <class className="KeyboardViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/KeyboardViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTap:"/>
-                <relationship kind="action" name="textFieldReturnEditing:"/>
-                <relationship kind="outlet" name="firstTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="secondTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="thirdTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="MBProgressHUDViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MBProgressHUDViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="HUBToHome:"/>
-                <relationship kind="action" name="showSimple:"/>
-                <relationship kind="action" name="showWithLabel:"/>
-                <relationship kind="action" name="showWithLabelDeterminate:"/>
-            </relationships>
-        </class>
-        <class className="ReadPlistFileViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ReadPlistFileViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mtrName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="mtrNum" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="mtrSex" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="stuName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="stuNum" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="stuSex" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="Sqlite3ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/Sqlite3ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="btnPressed:"/>
-                <relationship kind="action" name="goHoume:"/>
-            </relationships>
-        </class>
-        <class className="UIComponentViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIComponentViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="callActionsheet:"/>
-                <relationship kind="action" name="sliderChanged:" candidateClass="UISlider"/>
-                <relationship kind="action" name="switchChanged:" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="leftSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="progressBar" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="rightSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="sliderLable" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="dholerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/dholerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="goASIHTTPRequest:"/>
-                <relationship kind="action" name="goHUB:"/>
-                <relationship kind="action" name="goLibs:"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

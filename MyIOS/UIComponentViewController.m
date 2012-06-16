@@ -67,11 +67,26 @@
     if (buttonIndex == actionSheet.cancelButtonIndex) {
         
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"you select cancel" message:@"Are you sure?" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:nil];
-        [alert show];
-        
+        [alert show];       
         
         NSLog(@"cancel button clicked");
         return;
+    }else if(buttonIndex == actionSheet.destructiveButtonIndex){
+        
+        UIDatePicker *datePicker = (UIDatePicker *)[actionSheet viewWithTag:101];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        formatter.dateFormat = @"MM/dd/YY h:mm a";
+        NSString *timestamp = [formatter stringFromDate:datePicker.date];
+        //显示时间的变量 
+        NSLog(@"%@",timestamp);
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"you select cancel"
+                                                        message:[NSString stringWithFormat:@"current time is:%@",timestamp]
+                                                       delegate:self 
+                                              cancelButtonTitle:@"cancel"                               
+                                              otherButtonTitles:nil
+                              ];
+        [alert show];
+        
     }
     
     switch (buttonIndex) {
@@ -92,16 +107,24 @@
 }
 
 - (IBAction)callActionsheet:(id)sender {
+    NSString *title = UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation) ? @"\n\n\n\n\n\n\n\n\n" : @"\n\n\n\n\n\n\n\n\n\n\n\n" ;
+    UIActionSheet *actionsheet = [[UIActionSheet alloc] initWithTitle:title 
+                                                             delegate:self 
+                                                    cancelButtonTitle:@"cancel"
+                                               destructiveButtonTitle:@"set time"
+                                                    otherButtonTitles:nil];
     
-    UIActionSheet *actionsheet = [[UIActionSheet alloc] initWithTitle:@"action sheet title" delegate:self cancelButtonTitle:@"will cancel" destructiveButtonTitle:@"Are you sure" otherButtonTitles:nil];
-    
-    [actionsheet addButtonWithTitle:@"button1"];
-    [actionsheet addButtonWithTitle:@"button2"];
     //maybe in ipad
     //[actionsheet showInView:self.view];
     
     //in iphone
     [actionsheet showInView:[UIApplication sharedApplication].keyWindow];
+    
+    UIDatePicker *datePicker = [[UIDatePicker alloc] init];
+    datePicker.tag = 101;
+    // datePicker.datePickerMode = [(UISegmentedControl *)self.navigationItem.titleView selectedSegmentIndex];
+    
+    [actionsheet addSubview:datePicker];
 
 }
 
@@ -111,4 +134,6 @@
     [leftSwitch setOn:setting animated:YES];
     [rightSwitch setOn:setting animated:YES];	
 }
+
+
 @end
