@@ -59,6 +59,52 @@
     self.sliderLable.text = [NSString stringWithFormat:@"%i",progressAsInt];
     
 }
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"%i",buttonIndex);
+    
+    if (buttonIndex == actionSheet.cancelButtonIndex) {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"you select cancel" message:@"Are you sure?" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:nil];
+        [alert show];
+        
+        
+        NSLog(@"cancel button clicked");
+        return;
+    }
+    
+    switch (buttonIndex) {
+        case 0: {
+            NSLog(@"Item 1 Selected");
+            break;
+        }
+        case 1: {
+            NSLog(@"Item 2 Selected");
+            break;
+        }
+        case 2: {
+            NSLog(@"Item 3 Selected");
+            break;
+        }
+    }
+    
+}
+
+- (IBAction)callActionsheet:(id)sender {
+    
+    UIActionSheet *actionsheet = [[UIActionSheet alloc] initWithTitle:@"action sheet title" delegate:self cancelButtonTitle:@"will cancel" destructiveButtonTitle:@"Are you sure" otherButtonTitles:nil];
+    
+    [actionsheet addButtonWithTitle:@"button1"];
+    [actionsheet addButtonWithTitle:@"button2"];
+    //maybe in ipad
+    //[actionsheet showInView:self.view];
+    
+    //in iphone
+    [actionsheet showInView:[UIApplication sharedApplication].keyWindow];
+
+}
+
 - (IBAction)switchChanged:(UISwitch *)sender {
     UISwitch *mySwitch = (UISwitch *)sender;
     BOOL setting = mySwitch.isOn; //get switch status

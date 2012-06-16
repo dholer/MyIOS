@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIComponentViewController : UIViewController
+@interface UIComponentViewController : UIViewController<UIActionSheetDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UIProgressView *progressBar;
@@ -21,4 +21,7 @@
 
 - (IBAction)switchChanged:(UISwitch *)sender;
 - (IBAction)sliderChanged:(UISlider *)sender;
+
+- (IBAction)callActionsheet:(id)sender;
+
 @end
