@@ -50,4 +50,8 @@
 - (IBAction)goLibs:(id)sender {
     [self performSegueWithIdentifier:@"goLibs" sender:self];
 }
+
+- (IBAction)goViewControllers:(id)sender {
+    [self performSegueWithIdentifier:@"goViewControllers" sender:self];
+}
 @end

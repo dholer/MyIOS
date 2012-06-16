@@ -54,6 +54,7 @@
 		F6C993E4158CCBC10052DE5F /* PikerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C993E3158CCBC10052DE5F /* PikerDemoViewController.m */; };
 		F6C993EC158CD1D60052DE5F /* ProvinceCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C993EB158CD1D60052DE5F /* ProvinceCityViewController.m */; };
 		F6C993EE158CD1E20052DE5F /* provinceCities.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6C993ED158CD1E20052DE5F /* provinceCities.plist */; };
+		F6C993F2158CD7040052DE5F /* ViewControllersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C993F1158CD7040052DE5F /* ViewControllersViewController.m */; };
 		F6CDE3D5158B3B5600D9B60A /* MBProgressHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6CDE3D4158B3B5600D9B60A /* MBProgressHUDViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -146,6 +147,8 @@
 		F6C993EA158CD1D60052DE5F /* ProvinceCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvinceCityViewController.h; sourceTree = "<group>"; };
 		F6C993EB158CD1D60052DE5F /* ProvinceCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvinceCityViewController.m; sourceTree = "<group>"; };
 		F6C993ED158CD1E20052DE5F /* provinceCities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = provinceCities.plist; sourceTree = "<group>"; };
+		F6C993F0158CD7040052DE5F /* ViewControllersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllersViewController.h; sourceTree = "<group>"; };
+		F6C993F1158CD7040052DE5F /* ViewControllersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllersViewController.m; sourceTree = "<group>"; };
 		F6CDE3D3158B3B5600D9B60A /* MBProgressHUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUDViewController.h; sourceTree = "<group>"; };
 		F6CDE3D4158B3B5600D9B60A /* MBProgressHUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUDViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,6 +225,7 @@
 		F61CD8BD158B0AD800D1C597 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				F6C993EF158CD6DF0052DE5F /* ViewControllers */,
 				F6623CDD158C469D00AD403A /* UIComponent */,
 				F6623CD7158C3C3600AD403A /* PlistFile */,
 				F6623CD3158C2E1300AD403A /* addButton */,
@@ -408,6 +412,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F6C993EF158CD6DF0052DE5F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F6C993F3158CDE1F0052DE5F /* icons */,
+				F6C993F0158CD7040052DE5F /* ViewControllersViewController.h */,
+				F6C993F1158CD7040052DE5F /* ViewControllersViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F6C993F3158CDE1F0052DE5F /* icons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = icons;
+			sourceTree = "<group>";
+		};
 		F6CDE3CF158B386D00D9B60A /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -518,6 +539,7 @@
 				F6623CE0158C46CB00AD403A /* UIComponentViewController.m in Sources */,
 				F6C993E4158CCBC10052DE5F /* PikerDemoViewController.m in Sources */,
 				F6C993EC158CD1D60052DE5F /* ProvinceCityViewController.m in Sources */,
+				F6C993F2158CD7040052DE5F /* ViewControllersViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
