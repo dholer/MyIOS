@@ -7,7 +7,7 @@
 //
 
 #import "WebviewViewController.h"
-
+#import "MBProgressHUD.h"
 @interface WebviewViewController ()
 
 @end
@@ -32,13 +32,53 @@
     self.webView.backgroundColor = [UIColor clearColor];
     self.webView.scalesPageToFit = NO;
     
-    NSURL *url = [NSURL URLWithString:@"http://127.0.0.1/projects/webview/index.html"];
+    //NSURL *url = [NSURL URLWithString:@"http://127.0.0.1/projects/webview/index.html"];
+    NSURL *url = [NSURL URLWithString:@"http://www.facebook.com"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     [self.webView loadRequest:request];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"loading";
+    
     
     
 }
+- (void) webViewDidFinishLoad:(UIWebView *)webView
+{
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    NSString *currentUrl = [self.webView stringByEvaluatingJavaScriptFromString:@"window.document.location.href;"];
+    
+    NSString *title = [self.webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+    NSLog(@"URL:%@  title:%@",currentUrl,title);
+}
+
+- (BOOL) webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+    
+    NSString *stringUrl = [[request URL] absoluteString];
+    NSLog(@"stringUrl is:%@",stringUrl);
+    
+    NSArray *urlComps = [stringUrl componentsSeparatedByString:@":"];
+    
+    if([urlComps count] && [[urlComps objectAtIndex:0] isEqualToString:@"objc"])
+    {        
+        NSString *funcStr = [urlComps objectAtIndex:1];        
+        if([funcStr isEqualToString:@"doFunc1"])            
+        {
+            /*调用本地函数1*/   
+            NSLog(@"func1");  
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"title" message:@"msg" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:nil, nil];
+            [alert show];
+        }        
+        else if([funcStr isEqualToString:@"doFunc2"])            
+        {            
+            /*调用本地函数2*/ 
+            NSLog(@"func2");
+            [self.webView stringByEvaluatingJavaScriptFromString:@"alert('fun2 exec')"];
+        }        
+        return NO;        
+    }
+    return YES;
+} 
 
 - (void)viewDidUnload
 {
