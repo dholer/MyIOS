@@ -38,6 +38,8 @@
 		F6623CDA158C3C6500AD403A /* ReadPlistFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6623CD9158C3C6500AD403A /* ReadPlistFileViewController.m */; };
 		F6623CDC158C3C9900AD403A /* customInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6623CDB158C3C9900AD403A /* customInfo.plist */; };
 		F6623CE0158C46CB00AD403A /* UIComponentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6623CDF158C46CB00AD403A /* UIComponentViewController.m */; };
+		F67C82BF158F7F8E000F5ADC /* masks.html in Resources */ = {isa = PBXBuildFile; fileRef = F67C82B1158F7F8E000F5ADC /* masks.html */; };
+		F67C82C6158F7F8E000F5ADC /* pics.html in Resources */ = {isa = PBXBuildFile; fileRef = F67C82B8158F7F8E000F5ADC /* pics.html */; };
 		F687202F158B21F2008220B5 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = F687201A158B21F2008220B5 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F6872030158B21F2008220B5 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = F687201D158B21F2008220B5 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F6872031158B21F2008220B5 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = F687201F158B21F2008220B5 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -141,6 +143,8 @@
 		F6623CDB158C3C9900AD403A /* customInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = customInfo.plist; sourceTree = "<group>"; };
 		F6623CDE158C46CB00AD403A /* UIComponentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIComponentViewController.h; sourceTree = "<group>"; };
 		F6623CDF158C46CB00AD403A /* UIComponentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIComponentViewController.m; sourceTree = "<group>"; };
+		F67C82B1158F7F8E000F5ADC /* masks.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = masks.html; sourceTree = "<group>"; };
+		F67C82B8158F7F8E000F5ADC /* pics.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = pics.html; sourceTree = "<group>"; };
 		F6872019158B21F2008220B5 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		F687201A158B21F2008220B5 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		F687201B158B21F2008220B5 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -432,6 +436,15 @@
 			name = UIComponent;
 			sourceTree = "<group>";
 		};
+		F67C82AA158F7F8E000F5ADC /* html */ = {
+			isa = PBXGroup;
+			children = (
+				F67C82B1158F7F8E000F5ADC /* masks.html */,
+				F67C82B8158F7F8E000F5ADC /* pics.html */,
+			);
+			path = html;
+			sourceTree = "<group>";
+		};
 		F6872018158B21F2008220B5 /* ASIHTTPRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -476,6 +489,7 @@
 		F6937962158F23BE00ACCA17 /* Webview */ = {
 			isa = PBXGroup;
 			children = (
+				F67C82AA158F7F8E000F5ADC /* html */,
 				F6937964158F23DF00ACCA17 /* WebviewViewController.h */,
 				F6937965158F23DF00ACCA17 /* WebviewViewController.m */,
 			);
@@ -627,6 +641,8 @@
 				F6C99414158CE67B0052DE5F /* 9.png in Resources */,
 				F6C9941B158CE7D50052DE5F /* CustomCell.xib in Resources */,
 				F6C99420158CECAE0052DE5F /* friendsInfo.plist in Resources */,
+				F67C82BF158F7F8E000F5ADC /* masks.html in Resources */,
+				F67C82C6158F7F8E000F5ADC /* pics.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,15 +30,24 @@
 	// Do any additional setup after loading the view.
     self.webView.delegate = self;
     self.webView.backgroundColor = [UIColor clearColor];
+    //self.webView.scrollView.scrollEnabled = NO;
+    //self.webView.userInteractionEnabled = NO;
+    
+    //If YES, the webpage is scaled to fit and the user can zoom in and zoom out. If NO, user zooming is disabled. The default value is NO.
+    //Available in iOS 2.0 and later.
     self.webView.scalesPageToFit = NO;
-    
     //NSURL *url = [NSURL URLWithString:@"http://127.0.0.1/projects/webview/index.html"];
-    NSURL *url = [NSURL URLWithString:@"http://www.facebook.com"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    //NSURL *url = [NSURL URLWithString:@"http://www.facebook.com"];
+    //NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    //[self.webView loadRequest:request];
     
-    [self.webView loadRequest:request];
+    
+    [self loadPage];
+    
+    
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.labelText = @"loading";
+    
     
     
     
@@ -80,6 +89,7 @@
     return YES;
 } 
 
+
 - (void)viewDidUnload
 {
     [self setWebView:nil];
@@ -92,4 +102,9 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void) loadPage
+{
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"masks" withExtension:@"html"];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+}
 @end
