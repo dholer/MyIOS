@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F60BCEB6158B8A170012E0FA /* Sqlite3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F60BCEB5158B8A170012E0FA /* Sqlite3ViewController.m */; };
 		F60BCEB8158B8CC30012E0FA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F60BCEB7158B8CC30012E0FA /* libsqlite3.dylib */; };
+		F60C6AEA158F8A2C009D5146 /* FMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F60C6AE9158F8A2C009D5146 /* FMDBViewController.m */; };
 		F61CD8AF158B08C500D1C597 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = F61CD897158B08C500D1C597 /* NSObject+SBJson.m */; };
 		F61CD8B0158B08C500D1C597 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F61CD89A158B08C500D1C597 /* SBJsonParser.m */; };
 		F61CD8B1158B08C500D1C597 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F61CD89C158B08C500D1C597 /* SBJsonStreamParser.m */; };
@@ -89,6 +90,8 @@
 		F60BCEB4158B8A170012E0FA /* Sqlite3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sqlite3ViewController.h; sourceTree = "<group>"; };
 		F60BCEB5158B8A170012E0FA /* Sqlite3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sqlite3ViewController.m; sourceTree = "<group>"; };
 		F60BCEB7158B8CC30012E0FA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		F60C6AE8158F8A2C009D5146 /* FMDBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBViewController.h; sourceTree = "<group>"; };
+		F60C6AE9158F8A2C009D5146 /* FMDBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBViewController.m; sourceTree = "<group>"; };
 		F61CD896158B08C500D1C597 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		F61CD897158B08C500D1C597 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		F61CD898158B08C500D1C597 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -240,6 +243,8 @@
 			children = (
 				F60BCEB4158B8A170012E0FA /* Sqlite3ViewController.h */,
 				F60BCEB5158B8A170012E0FA /* Sqlite3ViewController.m */,
+				F60C6AE8158F8A2C009D5146 /* FMDBViewController.h */,
+				F60C6AE9158F8A2C009D5146 /* FMDBViewController.m */,
 			);
 			name = Sqlite3;
 			sourceTree = "<group>";
@@ -698,6 +703,7 @@
 				F6C96F71158D78500039DD23 /* FMDatabaseQueue.m in Sources */,
 				F6C96F73158D78500039DD23 /* FMResultSet.m in Sources */,
 				F6937966158F23DF00ACCA17 /* WebviewViewController.m in Sources */,
+				F60C6AEA158F8A2C009D5146 /* FMDBViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

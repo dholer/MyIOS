@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface KeyboardViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UITextField *firstTextField;
 @property (weak, nonatomic) IBOutlet UITextField *secondTextField;
 @property (weak, nonatomic) IBOutlet UITextField *thirdTextField;
 
 -(IBAction)textFieldReturnEditing:(id)sender;
+
 - (IBAction)backgroundTap:(id)sender;
 @end
