@@ -106,7 +106,7 @@
                                         <rect key="frame" x="0.0" y="187" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Tab View" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E6h-Qo-gUx">
@@ -399,7 +399,7 @@
                     </navigationItem>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-3497" y="248"/>
+            <point key="canvasLocation" x="-3573" y="279"/>
         </scene>
         <!--Players View Controller - Players-->
         <scene sceneID="BRl-JL-91L">
@@ -457,7 +457,7 @@
                     </navigationItem>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-2004" y="75"/>
+            <point key="canvasLocation" x="-1927" y="75"/>
         </scene>
         <!--Player Details View Controller - Add Player-->
         <scene sceneID="ByC-T6-pLF">
@@ -495,7 +495,7 @@
                     </navigationItem>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-1001" y="361"/>
+            <point key="canvasLocation" x="-1927" y="1229"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="70O-os-NdE">
@@ -510,7 +510,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="-1412" y="801"/>
+            <point key="canvasLocation" x="-1927" y="656"/>
         </scene>
         <!--Navigation Controller - Players-->
         <scene sceneID="xt8-wV-tUt">
@@ -549,7 +549,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94h-mb-ohl" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController definesPresentationContext="YES" id="8bG-Tj-RRk" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="WNn-be-tHR"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="uch-Bx-sqW">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -561,7 +561,7 @@
                     </connections>
                 </tabBarController>
             </objects>
-            <point key="canvasLocation" x="-2975" y="279"/>
+            <point key="canvasLocation" x="-2979" y="279"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ZYG-u0-GJj">
@@ -643,7 +643,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="-4101" y="234"/>
+            <point key="canvasLocation" x="-4093" y="279"/>
         </scene>
         <!--Keyboard View Controller - KBDemo1-->
         <scene sceneID="cib-rb-QgI">
@@ -1367,6 +1367,136 @@
         <image name="Gestures.png" width="30" height="30"/>
         <image name="Players.png" width="30" height="30"/>
     </resources>
+    <classes>
+        <class className="AddButtonViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddButtonViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addButton:"/>
+            </relationships>
+        </class>
+        <class className="CustomCellViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomCellViewController.h"/>
+        </class>
+        <class className="DateAndTimeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DateAndTimeViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="FMDBViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FMDBViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="execSql:"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="JSONViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JSONViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backToHome:"/>
+                <relationship kind="action" name="callApi:"/>
+                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="KeyboardDelegateViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/KeyboardDelegateViewController.h"/>
+        </class>
+        <class className="KeyboardViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/KeyboardViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundTap:"/>
+                <relationship kind="action" name="textFieldReturnEditing:"/>
+                <relationship kind="outlet" name="firstTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="secondTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="thirdTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="MBProgressHUDViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MBProgressHUDViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="HUBToHome:"/>
+                <relationship kind="action" name="showSimple:"/>
+                <relationship kind="action" name="showWithLabel:"/>
+                <relationship kind="action" name="showWithLabelDeterminate:"/>
+            </relationships>
+        </class>
+        <class className="PikerDemoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PikerDemoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="btnPressed:"/>
+                <relationship kind="outlet" name="myPickerView" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+        <class className="PlayerCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlayerCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="gameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="ratingImageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="PlayerDetailsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlayerDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="done:"/>
+            </relationships>
+        </class>
+        <class className="PlayersViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlayersViewController.h"/>
+        </class>
+        <class className="ProvinceCityViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProvinceCityViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonPressed:"/>
+                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+        <class className="ReadPlistFileViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ReadPlistFileViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mtrName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="mtrNum" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="mtrSex" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="stuName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="stuNum" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="stuSex" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="Sqlite3ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Sqlite3ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="btnPressed:"/>
+                <relationship kind="action" name="goHoume:"/>
+            </relationships>
+        </class>
+        <class className="UIComponentViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIComponentViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="callActionsheet:"/>
+                <relationship kind="action" name="sliderChanged:" candidateClass="UISlider"/>
+                <relationship kind="action" name="switchChanged:" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="leftSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="progressBar" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="rightSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="sliderLable" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ViewControllersViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewControllersViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="goHome:"/>
+            </relationships>
+        </class>
+        <class className="WebviewViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebviewViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
