@@ -111,6 +111,7 @@
 		F6C9941E158CEA4A0052DE5F /* CustomCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C9941D158CEA4A0052DE5F /* CustomCellViewController.m */; };
 		F6C99420158CECAE0052DE5F /* friendsInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6C9941F158CECAE0052DE5F /* friendsInfo.plist */; };
 		F6C99429158CF2660052DE5F /* DateAndTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C99428158CF2660052DE5F /* DateAndTimeViewController.m */; };
+		F6CC158F159804D600D56F4A /* TableViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6CC158E159804D600D56F4A /* TableViewViewController.m */; };
 		F6CDE3D5158B3B5600D9B60A /* MBProgressHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6CDE3D4158B3B5600D9B60A /* MBProgressHUDViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -275,6 +276,8 @@
 		F6C9941F158CECAE0052DE5F /* friendsInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = friendsInfo.plist; sourceTree = "<group>"; };
 		F6C99427158CF2650052DE5F /* DateAndTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateAndTimeViewController.h; sourceTree = "<group>"; };
 		F6C99428158CF2660052DE5F /* DateAndTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateAndTimeViewController.m; sourceTree = "<group>"; };
+		F6CC158D159804D600D56F4A /* TableViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewViewController.h; sourceTree = "<group>"; };
+		F6CC158E159804D600D56F4A /* TableViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewViewController.m; sourceTree = "<group>"; };
 		F6CDE3D3158B3B5600D9B60A /* MBProgressHUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUDViewController.h; sourceTree = "<group>"; };
 		F6CDE3D4158B3B5600D9B60A /* MBProgressHUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUDViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -354,6 +357,7 @@
 		F61CD8BD158B0AD800D1C597 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				F6CC158B159804A700D56F4A /* TableView */,
 				F6BF99A81592BE8500EB458D /* TabbarView */,
 				F6937962158F23BE00ACCA17 /* Webview */,
 				F6C993EF158CD6DF0052DE5F /* ViewControllers */,
@@ -673,6 +677,15 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		F6CC158B159804A700D56F4A /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				F6CC158D159804D600D56F4A /* TableViewViewController.h */,
+				F6CC158E159804D600D56F4A /* TableViewViewController.m */,
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
 		F6CDE3CF158B386D00D9B60A /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -840,6 +853,7 @@
 				F6BF99AE1592C09400EB458D /* Player.m in Sources */,
 				F6BF99B51592DFB000EB458D /* PlayerCell.m in Sources */,
 				F6BF99BC1592F34E00EB458D /* PlayerDetailsViewController.m in Sources */,
+				F6CC158F159804D600D56F4A /* TableViewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
